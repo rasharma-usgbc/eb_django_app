@@ -39,3 +39,4 @@ class BuildingAPITest(BuildingTestCase):
         buildings_json = json.loads(r.content)
         self.assertNotEqual(len(buildings_json), 0)
         # self.assertJSONEqual(r.json(), '{"name": "USGBC", "address":"2101 L Street", "leed_id": 1000000117, "certification": "platinum"}')
+        #comment to do some code changes, test for Travis CI
