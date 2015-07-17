@@ -24,19 +24,3 @@ class BuildingTestCase(TestCase):
         self.c = Client()
         self.base = '/building/'
         
-class BuildingAPITest(BuildingTestCase):
-
-    def test_read(self):
-        # self.c.login("username", "password")
-        building_url = self.base
-        
-        # Retrieve created building
-        r = self.c.get(building_url); #, auth=(self.u, self.p))
-        
-        # Run tests
-        self.assertEqual(r.status_code, 200)
-        print(r.content)
-        buildings_json = json.loads(r.content)
-        self.assertNotEqual(len(buildings_json), 0)
-        # self.assertJSONEqual(r.json(), '{"name": "USGBC", "address":"2101 L Street", "leed_id": 1000000117, "certification": "platinum"}')
-        #test comment
