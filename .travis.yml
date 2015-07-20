@@ -11,11 +11,9 @@ before_install:
 install:
  # - python setup.py -q install
  - pip install -q Django==$DJANGO_VERSION
- - "pip install -r requirements.txt"
-env:
- - DJANGO_VERSION=1.8.3
- - NEO4J_VERSION=2.1.5
- - NEO4J_VERSION=2.0.4
- - NEO4J_VERSION=1.9.8
+ - pip install -r requirements.txt
 # command to run tests
 script: nosetests
+env:
+ - DJANGO_VERSION=1.8.3
+ - NEO4J_VERSION=2.2.3
