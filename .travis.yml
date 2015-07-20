@@ -5,7 +5,7 @@ python:
 # command to install dependencies
 install:
  # - python setup.py -q install
- - pip install -q Django==$DJANGO_VERSION
+ #- pip install -q Django==$DJANGO_VERSION
  - pip install -r requirements.txt
  # install Neo4j locally:
  - wget dist.neo4j.org/neo4j-community-2.2.0-unix.tar.gz
@@ -15,7 +15,7 @@ install:
 # command to run tests
 script: nosetests
 env:
- - DJANGO_VERSION=1.8.3
+ #- DJANGO_VERSION=1.8.3
  - NEO4J_VERSION=2.2.3
 branches:
  only:
