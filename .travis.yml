@@ -12,3 +12,5 @@ install:
 script: nosetests
 env:
  - DJANGO_VERSION=1.8.3
+services:
+ - neo4j
