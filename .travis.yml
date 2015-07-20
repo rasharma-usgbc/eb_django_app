@@ -2,11 +2,6 @@ language: python
 python:
  - "3.4"
  - "2.7"
-env:
- - DJANGO_VERSION=1.8.3
- - NEO4J_VERSION=2.1.5
- - NEO4J_VERSION=2.0.4
- - NEO4J_VERSION=1.9.8
 before_install:
  # install Neo4j locally:
  - wget dist.neo4j.org/neo4j-community-$NEO4J_VERSION-unix.tar.gz
@@ -17,5 +12,10 @@ install:
  # - python setup.py -q install
  - pip install -q Django==$DJANGO_VERSION
  - "pip install -r requirements.txt"
+env:
+ - DJANGO_VERSION=1.8.3
+ - NEO4J_VERSION=2.1.5
+ - NEO4J_VERSION=2.0.4
+ - NEO4J_VERSION=1.9.8
 # command to run tests
 script: nosetests
