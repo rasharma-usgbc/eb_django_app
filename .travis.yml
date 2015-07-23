@@ -16,6 +16,7 @@ install:
 script: nosetests eb_django_app/neo4j/
 env:
  - DJANGO_VERSION=1.8.3
+ - DJANGO_SETTINGS_MODULE=/eb_django_app/neo4j.settings
  #- NEO4J_VERSION=2.2.3
 branches:
  only:
