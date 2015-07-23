@@ -78,5 +78,3 @@ alias pydoc="python -m pydoc"
 if [ -n "$BASH" -o -n "$ZSH_VERSION" ] ; then
     hash -r 2>/dev/null
 fi
-
-set DJANGO_SETTINGS_MODULE=eb_django_app.settings
