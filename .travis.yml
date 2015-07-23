@@ -13,7 +13,7 @@ install:
  #- sed -i.bak s/dbms.security.auth_enabled=true/dbms.security.auth_enabled=false/g neo4j-community-2.2.0/conf/neo4j-server.properties
  #- neo4j-community-2.2.0/bin/neo4j start
 # command to run tests
-script: nosetests eb_django_app/neo4j/
+script: nosetests eb_django_app/
 env:
  - DJANGO_VERSION=1.8.3
  #- NEO4J_VERSION=2.2.3
