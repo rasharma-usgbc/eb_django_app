@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import os
 import sys
-from manage import neo4j
+import neo4j
 
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "neo4j.settings")
