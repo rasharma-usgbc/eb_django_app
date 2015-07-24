@@ -13,9 +13,5 @@ class BuildingTestCase(TestCase):
         request = self.factory.get('/buildings')
         response = buildings(request)
         self.assertEqual(response.status_code, 200)
-        print response.data
         b = Buildings.objects.get(pk=1)
         self.assertEqual(b.name, "test_name")
-
-    def test_read_fail(self):
-        """Building read attempt fail is verified"""
