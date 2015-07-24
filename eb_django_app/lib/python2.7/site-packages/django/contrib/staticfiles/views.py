@@ -5,32 +5,33 @@ development, and SHOULD NOT be used in a production setting.
 """
 import os
 import posixpath
+import urllib
 
 from django.conf import settings
-from django.contrib.staticfiles import finders
+from django.core.exceptions import ImproperlyConfigured
 from django.http import Http404
-from django.utils.six.moves.urllib.parse import unquote
 from django.views import static
 
+from django.contrib.staticfiles import finders
 
-def serve(request, path, insecure=False, **kwargs):
+def serve(request, path, document_root=None, insecure=False, **kwargs):
     """
     Serve static files below a given point in the directory structure or
     from locations inferred from the staticfiles finders.
 
     To use, put a URL pattern such as::
 
-        from django.contrib.staticfiles import views
-
-        url(r'^(?P<path>.*)$', views.serve)
+        (r'^(?P<path>.*)$', 'django.contrib.staticfiles.views.serve')
 
     in your URLconf.
 
-    It uses the django.views.static.serve() view to serve the found files.
+    It uses the django.views.static view to serve the found files.
     """
     if not settings.DEBUG and not insecure:
-        raise Http404
-    normalized_path = posixpath.normpath(unquote(path)).lstrip('/')
+        raise ImproperlyConfigured("The staticfiles view can only be used in "
+                                   "debug mode or if the the --insecure "
+                                   "option of 'runserver' is used")
+    normalized_path = posixpath.normpath(urllib.unquote(path)).lstrip('/')
     absolute_path = finders.find(normalized_path)
     if not absolute_path:
         if path.endswith('/') or path == '':

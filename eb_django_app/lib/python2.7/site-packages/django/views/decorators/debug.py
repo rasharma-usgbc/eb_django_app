@@ -28,12 +28,12 @@ def sensitive_variables(*variables):
     """
     def decorator(func):
         @functools.wraps(func)
-        def sensitive_variables_wrapper(*func_args, **func_kwargs):
+        def sensitive_variables_wrapper(*args, **kwargs):
             if variables:
                 sensitive_variables_wrapper.sensitive_variables = variables
             else:
                 sensitive_variables_wrapper.sensitive_variables = '__ALL__'
-            return func(*func_args, **func_kwargs)
+            return func(*args, **kwargs)
         return sensitive_variables_wrapper
     return decorator
 
@@ -65,9 +65,8 @@ def sensitive_post_parameters(*parameters):
         @functools.wraps(view)
         def sensitive_post_parameters_wrapper(request, *args, **kwargs):
             assert isinstance(request, HttpRequest), (
-                "sensitive_post_parameters didn't receive an HttpRequest. "
-                "If you are decorating a classmethod, be sure to use "
-                "@method_decorator."
+              "sensitive_post_parameters didn't receive an HttpRequest. If you "
+              "are decorating a classmethod, be sure to use @method_decorator."
             )
             if parameters:
                 request.sensitive_post_parameters = parameters
