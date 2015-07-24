@@ -19,6 +19,12 @@ script: python eb_django_app/neo4j/manage.py test
 env:
  - DJANGO_VERSION=1.8.3
  #- NEO4J_VERSION=2.2.3
+notifications:
+ email:
+  - rasharma@usgbc.org
+  - singhekta20@gmail.com
+ on_success: always # default: change
+ on_failure: faliure # default: always
 branches:
  only:
   - master
