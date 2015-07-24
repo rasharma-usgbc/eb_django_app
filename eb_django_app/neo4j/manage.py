@@ -2,9 +2,8 @@
 import os
 import sys
 
-from py2neo import ServiceRoot
-graphenedb_url = os.environ.get("http://arcdb.sb05.stations.graphenedb.com:24789/db/data/", "http://localhost:7474/")
-graph = ServiceRoot(graphenedb_url).graph
+from py2neo import neo4j
+graph_db = neo4j.GraphDatabaseService("http://arcdb.sb05.stations.graphenedb.com:24789/db/data/")
 
 #from py2neo import neo4j
 #from neo4jrestclient.client import GraphDatabase
