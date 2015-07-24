@@ -22,6 +22,7 @@ env:
 notifications:
  email:
   - rasharma@usgbc.org
+  - geraldmcfarlin4@gmail.com
   - singhekta20@gmail.com
  on_success: always # default: change
  on_failure: faliure # default: always
