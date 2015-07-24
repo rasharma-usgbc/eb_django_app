@@ -4,6 +4,7 @@ python:
  - "2.7"
 # command to install dependencies
 install:
+ - pip install .
  - pip install -q Django==$DJANGO_VERSION
  - pip install neo4django
  - pip install -r requirements.txt
