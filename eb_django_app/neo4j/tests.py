@@ -1,6 +1,7 @@
 import requests
 from django.test import TestCase
 import json
+import neo4j
 
 from django.test.client import Client
 from django.contrib.auth.models import User
