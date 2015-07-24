@@ -2,6 +2,8 @@
 import os
 import sys
 from py2neo import neo4j
+from neo4jrestclient.client import GraphDatabase
+
 graph_db = neo4j.GraphDatabaseService("http://localhost:7474/db/data/")
 
 if __name__ == "__main__":
