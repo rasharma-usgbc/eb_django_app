@@ -3,7 +3,7 @@ import os
 import sys
 
 from py2neo import neo4j
-graph_db = neo4j.GraphDatabaseService("http://arcdb.sb05.stations.graphenedb.com:24789/db/data/")
+#graph_db = neo4j.GraphDatabaseService("http://arcdb.sb05.stations.graphenedb.com:24789/db/data/")
 
 #from py2neo import neo4j
 #from neo4jrestclient.client import GraphDatabase
