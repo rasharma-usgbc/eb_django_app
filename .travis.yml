@@ -8,7 +8,7 @@ install:
  - pip install -q Django==$DJANGO_VERSION
  - pip install neo4django
  - pip install neo4jrestclient
- - pip install py2neo
+ #- pip install py2neo
  #./install-dependencies.sh
  # install Neo4j locally:
  #- wget dist.neo4j.org/neo4j-community-2.2.0-unix.tar.gz
