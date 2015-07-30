@@ -5,7 +5,7 @@ python:
 install:
  #chmod 755 install-dependencies.sh
  - sudo bash install-dependencies.sh
- - pip install -q Django==$DJANGO_VERSION
+ #- pip install -q Django==$DJANGO_VERSION
  - pip install neo4django
  #./install-dependencies.sh
  # install Neo4j locally:
