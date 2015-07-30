@@ -10,9 +10,7 @@ install:
  #- sed -i.bak s/dbms.security.auth_enabled=true/dbms.security.auth_enabled=false/g neo4j-community-2.2.0/conf/neo4j-server.properties
  #- neo4j-community-2.2.0/bin/neo4j start
  #- pip install -r requirements.txt
- while read p; do
-  pip install $p
- done < requirements.pip
+ - bash test.sh
  #- pip install -r requirements.txt
  #- pip install -q Django==$DJANGO_VERSION
  #- pip install neo4django
