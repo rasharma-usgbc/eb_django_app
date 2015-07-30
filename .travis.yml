@@ -3,11 +3,8 @@ python:
  #- "3.4"
  - "2.7"
 # command to install dependencies
-before_script:
- while read p; do
-  pip install $p
- done < requirements.pip
-#install:
+install:
+ . ./install-dependencies.sh
  # install Neo4j locally:
  #- wget dist.neo4j.org/neo4j-community-2.2.0-unix.tar.gz
  #- tar -xzf neo4j-community-2.2.0-unix.tar.gz
