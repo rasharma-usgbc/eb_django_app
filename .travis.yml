@@ -6,6 +6,10 @@ python:
 install:
  #chmod 755 install-dependencies.sh
  - sudo bash install-dependencies.sh
+ - pip install -q Django==$DJANGO_VERSION
+ - pip install neo4django
+ - pip install neo4jrestclient
+ - pip install py2neo
  #./install-dependencies.sh
  # install Neo4j locally:
  #- wget dist.neo4j.org/neo4j-community-2.2.0-unix.tar.gz
@@ -14,10 +18,6 @@ install:
  #- neo4j-community-2.2.0/bin/neo4j start
  #- pip install -r requirements.txt
  #- pip install -r requirements.txt
- - pip install -q Django==$DJANGO_VERSION
- - pip install neo4django
- - pip install neo4jrestclient
- - pip install py2neo
 # command to run tests
 #script: nosetests eb_django_app/neo4j/
 script: python eb_django_app/manage.py test neo4j
