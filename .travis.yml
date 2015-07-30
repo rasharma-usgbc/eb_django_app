@@ -14,7 +14,7 @@ install:
  #- neo4j-community-2.2.0/bin/neo4j start
  #- pip install -r requirements.txt
  #- pip install -r requirements.txt
- - pip install -q Django==$DJANGO_VERSION
+ #- pip install -q Django==$DJANGO_VERSION
  #- pip install neo4django
  #- pip install neo4jrestclient
  #- pip install py2neo
