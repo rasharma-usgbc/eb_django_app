@@ -5,7 +5,7 @@ python:
 # command to install dependencies
 install:
  #chmod 755 install-dependencies.sh
- sudo bash install-dependencies.sh
+ - sudo bash install-dependencies.sh
  #./install-dependencies.sh
  # install Neo4j locally:
  #- wget dist.neo4j.org/neo4j-community-2.2.0-unix.tar.gz
