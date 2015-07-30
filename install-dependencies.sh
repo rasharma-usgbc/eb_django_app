@@ -1,3 +1,3 @@
 while read p; do
   pip install $p
-done < requirements.pip
+done < requirements.txt
