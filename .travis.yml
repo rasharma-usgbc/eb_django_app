@@ -17,9 +17,8 @@ install:
  #- pip install -r requirements.txt
 # command to run tests
 #script: nosetests eb_django_app/neo4j/
-script:
- #- python eb_django_app/manage.py syncdb
- - python eb_django_app/manage.py test neo4j
+script: python eb_django_app/manage.py test neo4j
+#- python eb_django_app/manage.py syncdb
 env:
  - DJANGO_VERSION=1.8.3
  #- NEO4J_VERSION=2.2.3
@@ -33,4 +32,3 @@ env:
 branches:
  only:
   - master
-#test comment
