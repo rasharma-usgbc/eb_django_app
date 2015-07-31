@@ -5,7 +5,6 @@ python:
 install:
  #chmod 755 install-dependencies.sh
  - sudo bash install-dependencies.sh
- - sudo python eb_django_app/manage.py syncdb
  #- pip install -q Django==$DJANGO_VERSION
  #- pip install neo4django
  #./install-dependencies.sh
@@ -18,7 +17,9 @@ install:
  #- pip install -r requirements.txt
 # command to run tests
 #script: nosetests eb_django_app/neo4j/
-script: python eb_django_app/manage.py test neo4j
+script:
+ - python eb_django_app/manage.py syncdb
+ - python eb_django_app/manage.py test neo4j
 env:
  - DJANGO_VERSION=1.8.3
  #- NEO4J_VERSION=2.2.3
