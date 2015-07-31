@@ -5,7 +5,7 @@ python:
 install:
  #chmod 755 install-dependencies.sh
  - sudo bash install-dependencies.sh
- - sudo python manage.py syncdb
+ - sudo python eb_django_app/manage.py syncdb
  #- pip install -q Django==$DJANGO_VERSION
  #- pip install neo4django
  #./install-dependencies.sh
