@@ -18,7 +18,7 @@ install:
 # command to run tests
 #script: nosetests eb_django_app/neo4j/
 script:
- - python eb_django_app/manage.py syncdb
+ #- python eb_django_app/manage.py syncdb
  - python eb_django_app/manage.py test neo4j
 env:
  - DJANGO_VERSION=1.8.3
