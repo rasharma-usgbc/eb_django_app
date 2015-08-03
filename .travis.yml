@@ -3,6 +3,7 @@ python:
  - "2.7"
 # command to install dependencies
 install:
+ - pip install -r requirements.txt
  #chmod 755 install-dependencies.sh
  #- sudo bash install-dependencies.sh
  #- pip install -q Django==$DJANGO_VERSION
@@ -13,7 +14,7 @@ install:
  #- tar -xzf neo4j-community-2.2.0-unix.tar.gz
  #- sed -i.bak s/dbms.security.auth_enabled=true/dbms.security.auth_enabled=false/g neo4j-community-2.2.0/conf/neo4j-server.properties
  #- neo4j-community-2.2.0/bin/neo4j start
- - pip install -r requirements.txt
+ #- pip install -r requirements.txt
  #- pip install -r requirements.txt
 # command to run tests
 #script: nosetests eb_django_app/neo4j/
