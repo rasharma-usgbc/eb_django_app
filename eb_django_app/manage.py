@@ -1,4 +1,4 @@
-~/projectpath/venv/bin/python
+!/projectpath/venv/bin/python
 import os
 import sys
 import neo4j
